@@ -1,2 +1,2 @@
 # napastak
-React Component Generator
+React Components Library

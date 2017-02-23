@@ -1,0 +1,31 @@
+{
+  "name": "napo",
+  "version": "1.2.0",
+  "description": "Napo - React Components Library",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vhpoet/napo"
+  },
+  "author": "Vahe Hovhannisyan <vhpoet@gmail.com>",
+  "homepage": "https://github.com/vhpoet/napo",
+  "keywords": [
+    "react"
+  ],
+  "scripts": {
+    "build": "webpack --optimize-minimize --config ./webpack.config.js"
+  },
+  "files": ["dist"],
+  "main": "dist/napo.js",
+  "devDependencies": {
+    "babel-loader": "^6.3.2",
+    "babel-polyfill": "^6.23.0",
+    "babel-preset-es2015": "^6.22.0",
+    "babel-preset-react": "^6.23.0",
+    "babel-preset-stage-0": "^6.22.0",
+    "classnames": "^2.2.5",
+    "react": "^15.4.2",
+    "webpack": "^2.2.1",
+    "webpack-node-externals": "^1.5.4"
+  }
+}
