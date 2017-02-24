@@ -1,6 +1,6 @@
 {
   "name": "napo",
-  "version": "1.2.0",
+  "version": "0.0.0-development",
   "description": "Napo - React Components Library",
   "license": "MIT",
   "repository": {
@@ -13,9 +13,13 @@
     "react"
   ],
   "scripts": {
-    "build": "webpack --optimize-minimize --config ./webpack.config.js"
+    "build": "webpack --optimize-minimize --config ./webpack.config.js",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
-  "files": ["dist"],
+  "prepublish": "npm run build",
+  "files": [
+    "dist"
+  ],
   "main": "dist/napo.js",
   "devDependencies": {
     "babel-loader": "^6.3.2",
@@ -26,6 +30,7 @@
     "classnames": "^2.2.5",
     "react": "^15.4.2",
     "webpack": "^2.2.1",
-    "webpack-node-externals": "^1.5.4"
+    "webpack-node-externals": "^1.5.4",
+    "semantic-release": "^6.3.2"
   }
 }
