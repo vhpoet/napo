@@ -16,7 +16,7 @@ export default class AnimateEnterLeave extends Component {
   }
 
   render() {
-    const { effect } = this.props
+    const { children, effect } = this.props
 
     return (
       <ReactCSSTransitionGroup
@@ -30,7 +30,7 @@ export default class AnimateEnterLeave extends Component {
         transitionLeaveTimeout={500}
         className={cx(effect)}
         component="div">
-        {this.props.children}
+        {children}
       </ReactCSSTransitionGroup>
     )
   }
