@@ -12,11 +12,17 @@ module.exports = {
   },
   externals: [nodeExternals()],
   module: {
-    loaders: [
+    rules: [
       {
-        test: /\.js$/,
-        exclude: /(node_modules)/,
-        loader: 'babel-loader'
+        test: /\.js$/, use: 'babel-loader'
+      },
+      {
+        test: /\.scss$/,
+        use: [
+          { loader: "style-loader" },
+          { loader: "css-loader" },
+          { loader: "sass-loader" }
+        ]
       }
     ]
   }
