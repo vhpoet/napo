@@ -1,5 +1,5 @@
 import React, {Component, PropTypes} from 'react'
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
+import CSSTransitionGroup from 'react-transition-group/CSSTransitionGroup'
 
 import classNames from 'classnames/bind'
 import styles from './AnimateEnterLeave.scss'
@@ -15,11 +15,11 @@ export default class AnimateEnterLeave extends Component {
     effect: 'fade'
   }
 
-  render() {
+  render () {
     const { children, effect } = this.props
 
     return (
-      <ReactCSSTransitionGroup
+      <CSSTransitionGroup
         transitionName={{
           enter: cx('enter'),
           enterActive: cx('enterActive'),
@@ -29,9 +29,9 @@ export default class AnimateEnterLeave extends Component {
         transitionEnterTimeout={1000}
         transitionLeaveTimeout={500}
         className={cx(effect)}
-        component="div">
+        component='div'>
         {children}
-      </ReactCSSTransitionGroup>
+      </CSSTransitionGroup>
     )
   }
 }
